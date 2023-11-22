@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="shop.css" />
   </head>
   <body>
+    <!-- nav start -->
     <nav class="navbar">
       <div class="logo">
         <h3>Doa'a</h3>
@@ -34,8 +35,9 @@
         <i class="fas fa-bars"></i>
       </div>
     </nav>
+    <!-- nav end -->
     <h1 class="pheading">WELCOME In Your Second WORLD!</h1>
-    <h3 class="desc">Women's Rings</h3>
+    <h3 class="desc"><a class="pre" id="womenRingsLink">Women's Rings</a></h3>
     <section class="sec">
       <div class="product">
         <!-- start card -->
@@ -113,7 +115,7 @@
       </div>
     </div>
 
-    <h3 class="desc">Women's Nickles</h3>
+    <h3 class="desc"><a class="pre" id="womenNicklesLink">Women's Nickles</a></h3>
     <section class="sec">
       <div class="product">
         <!-- Continue with cards for Women's Nickles -->
@@ -182,7 +184,7 @@
     </section>
     <!-- end section -->
     <!-- start section -->
-    <h3 class="desc">Women's Anklet</h3>
+    <h3 class="desc"><a class="pre" id="womenAnkletLink">Women's Anklet</a></h3>
     <section class="sec">
       <div class="product">
         <!-- Continue with cards for Women's Anklet -->
@@ -255,5 +257,20 @@
       <!-- end card -->
       </div>
     </section>
+    <script>
+      document.getElementById('womenRingsLink').addEventListener('click', function() {
+        // Redirect to the new page when the link is clicked
+        window.location.href = 'womenRings.html'; // Replace 'women_rings.html' with the actual URL you want to redirect to
+    });
+    document.getElementById('womenNicklesLink').addEventListener('click', function() {
+      // Redirect to the new page when the link is clicked
+      window.location.href = 'womenNickles.html'; // Replace 'women_rings.html' with the actual URL you want to redirect to
+  });
+  document.getElementById('womenAnkletLink').addEventListener('click', function() {
+    // Redirect to the new page when the link is clicked
+    window.location.href = 'womenAnklet.html'; // Replace 'women_rings.html' with the actual URL you want to redirect to
+});
+  </script>
+  
   </body>
 </html>

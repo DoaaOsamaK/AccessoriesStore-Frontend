@@ -16,6 +16,9 @@ body {
     font-weight: normal;
     font-style: normal;
   }
+  .pre {
+    cursor: pointer;
+}
 .pheading{
     font-family:'Agbalumo Script';
     text-align: center;
