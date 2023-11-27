@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First View</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+           
+        }
+        
+        body {
+            background-color: #084819;
+            height: 100%;
+            overflow: auto;
+        }
+        @font-face {
+            font-family: 'Agbalumo Script';
+            src: url('../fonts/Agbalumo-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+          }
+          .pre {
+            cursor: pointer;
+        }
+        .pheading{
+            font-family:'Agbalumo Script';
+            text-align: center;
+            margin:50px 0;
+            color:#3a7563;
+            }
+        .menu-btn {
+            color: #e6d3a7;
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            transition: all .3s ease-in-out;
+            display: none;
+        }
+        
+        .navbar {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top:0;
+            z-index: 999;
+            background-color: #3a7563;
+            border-radius: 0 0 25px 25%;
+            box-shadow: 0 0 14px rgba(0, 0, 0, .8);
+        }
+        
+        .navbar .logo h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 35px;
+            color: #e6d3a7;
+            border-bottom: 4px solid #392f2f;
+            border-bottom-style: dashed;
+        }
+        
+        .navbar .menu li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .navbar .menu li a {
+            display: block;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #e6d3a7;
+            font-size: 20px;
+        }
+        
+        .navbar .menu li .active {
+            padding: 6px;
+            border: 3px solid #392f2f;
+            border-radius: 25px;
+            background-color: #392f2f;
+        }
+        
+        .navbar .menu li a i {
+            margin-right: 10px;
+            color: #392f2f;
+        }
+        
+        .navbar .menu li a:hover {
+            padding: 6px;
+            border: 3px solid #392f2f;
+            border-radius: 25px;
+            background-color: #392f2f;
+        }
+        
+        /* Add this rule for the shopping icon */
+        .navbar .menu li .shopping:hover {
+            border: 3px solid #e6d3a7;
+            background-color: #e6d3a7;
+            border-radius: 25px;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('DancingScript-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+          }
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   
+}
+
+body {
+    background-color:#392f2f ;
+    height: 100%;
+    overflow: auto;
+}
+@font-face {
+    font-family: 'Agbalumo Script';
+    src: url('Agbalumo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .pre {
+    cursor: pointer;
+
+}
+a{
+    text-decoration: none !important;
+    color:#fff;
+}
+.pheading{
+    font-family:'Agbalumo Script';
+    text-align: center;
+    margin:50px 0;
+    color:#3a7563;
+    }
+    .blur-box {
+        position: absolute;
+        top: 50%;
+        left: 0; /* Change this line to move the box to the left */
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(8px);
+        max-width: 70%;
+        text-align: center;
+        margin:50px 34px;
+    }
+    
+    .blur-box p {
+        margin: 10px 0;
+    }
+.menu-btn {
+    color: #e6d3a7;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all .3s ease-in-out;
+    display: none;
+}
+
+.navbar {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index: 999;
+    background-color: #3a7563;
+    border-radius: 0 0 25px 25%;
+    box-shadow: 0 0 14px rgba(0, 0, 0, .8);
+}
+
+.navbar .logo h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 35px;
+    color: #e6d3a7;
+    border-bottom: 4px solid #392f2f;
+    border-bottom-style: dashed;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #e6d3a7;
+    font-size: 20px;
+}
+
+.navbar .menu li .active {
+    padding: 6px;
+    border: 3px solid #392f2f;
+    border-radius: 25px;
+    background-color: #392f2f;
+}
+
+.navbar .menu li a i {
+    margin-right: 10px;
+    color: #392f2f;
+}
+
+.navbar .menu li a:hover {
+    padding: 6px;
+    border: 3px solid #392f2f;
+    border-radius: 25px;
+    background-color: #392f2f;
+}
+
+/* Add this rule for the shopping icon */
+.navbar .menu li .shopping:hover {
+    border: 3px solid #e6d3a7;
+    background-color: #e6d3a7;
+    border-radius: 25px;
+}
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('DancingScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .content {
+    background-image: url("../imgs/wallpaper/final.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Change from flex-start to center */
+    color:#fff;
+    height: 100vh; 
+    font-weight:  400;
+    text-align: left;
+}        
+    </style>
+</head>
+<body>
+    <!-- nav start -->
+    <nav class="navbar">
+        <div class="logo">
+          <h3>Doa'a</h3>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html"  >About Us</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+            <li><a href="shopNow.html">Shop Now</a></li>
+            <li><a href="bag.html">Your Bag</a></li>
+            <li>
+              <a href="bag.html" class="shopping"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      <!-- nav end -->
+      <section class="content">
+        <div class="container">
+            <div class="blur-box">
+                <h1>We Will Happy To contact ! </h1>
+                <p>Follow on Social Media:</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"> Augalassia</i></a>
+                    <br>
+                    <br>
+                    <a href="#"><i class="fab fa-twitter"></i> Augalassia</a>
+                    <br>
+                    <br>
+                    <a href="#"><i class="fab fa-instagram"></i> Augalassia</a>
+                        </div>  
+            </div>
+        </div>
+        
+
+</body>
+</html>
+
