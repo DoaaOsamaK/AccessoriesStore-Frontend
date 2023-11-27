@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   
+}
+
+body {
+    background-color: #ecdec0;
+    height: 100%;
+    overflow: auto;
+}
+@font-face {
+    font-family: 'Agbalumo Script';
+    src: url('Agbalumo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .pre {
+    cursor: pointer;
+}
+.pheading{
+    font-family:'Agbalumo Script';
+    text-align: center;
+    margin:50px 0;
+    color:#3a7563;
+    }
+.menu-btn {
+    color: #e6d3a7;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all .3s ease-in-out;
+    display: none;
+}
+
+.navbar {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index: 999;
+    background-color: #3a7563;
+    border-radius: 0 0 25px 25%;
+    box-shadow: 0 0 14px rgba(0, 0, 0, .8);
+}
+
+.navbar .logo h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 35px;
+    color: #e6d3a7;
+    border-bottom: 4px solid #392f2f;
+    border-bottom-style: dashed;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #e6d3a7;
+    font-size: 20px;
+}
+
+.navbar .menu li .active {
+    padding: 6px;
+    border: 3px solid #392f2f;
+    border-radius: 25px;
+    background-color: #392f2f;
+}
+
+.navbar .menu li a i {
+    margin-right: 10px;
+    color: #392f2f;
+}
+
+.navbar .menu li a:hover {
+    padding: 6px;
+    border: 3px solid #392f2f;
+    border-radius: 25px;
+    background-color: #392f2f;
+}
+
+/* Add this rule for the shopping icon */
+.navbar .menu li .shopping:hover {
+    border: 3px solid #e6d3a7;
+    background-color: #e6d3a7;
+    border-radius: 25px;
+}
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('DancingScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+  .welcome{
+    color: #392f2f;
+    margin:20px;
+    font-family:sans-serif;
+  }
+  /* card */
+  .sec{
+    padding:10px 5%;
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+.product .card{
+    width:310px;
+    background: #f5f5f5;
+    box-shadow:0 10px 20px rgba(0, 0, 0, .8);
+    border-radius:15px;
+    padding:5px;
+    margin-bottom:20px;
+}
+.product .card img{
+    height:410px;
+    width:100%;
+    
+}
+.product .card .descc{
+    padding:5px 20px;
+    opacity:0.8;
+}
+.desc{
+    margin-left:60px;
+    margin-bottom: 30px;
+    text-align: center;
+    color:#e6d3a7;
+    padding:5px 20px;
+    opacity:0.8;
+    border-radius: 25px 0 25% 0; 
+    background-color: #3a7563;
+    font-size: 25px;
+    padding:8px 18px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+}
+.product .card .titel{
+ font-weight:900;
+ font-size:20px;
+ color:#392f2f;
+ padding:0 20px;
+ text-align: center;
+ }
+ .product .card .box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 20px 5px;
+ }
+ .product .card .box .praice{
+    margin:5px;
+    color:#3a7563;
+    font-size:25px;
+    font-weight:bold;
+ }
+ .product .card .box .btn{
+    background-color: #3a7563;
+    color:#e6d3a7;
+    text-transform:uppercase;
+
+    border-radius: 25px;
+    padding:10px 18px;
+    font-size:14px;
+    font-weight:bold;
+    cursor: pointer;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .product .card .box .btn:hover{
+    background-color: #e6d3a7;
+    color:#3a7563;
+ }
+  
+  .blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .zoomed-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: none;
+  }
+  
+  .zoomed-card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  

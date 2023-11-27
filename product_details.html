@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <!-- Add your styles if needed -->
+</head>
+<body>
+    <div>
+        <h1 id="productName"></h1>
+        <div id="productDetails">
+            <img id="productImage" alt="Product Image">
+            <div>
+                <p id="productDescription"></p>
+                <p id="productPrice"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Use JavaScript to populate the details based on the selected product
+        document.addEventListener("DOMContentLoaded", function() {
+            // Retrieve data from the URL or any other source
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('name');
+            const productDescription = urlParams.get('description');
+            const productPrice = urlParams.get('price');
+            const productImage = urlParams.get('image');
+
+            // Populate the HTML elements
+            document.getElementById('productName').innerText = productName;
+            document.getElementById('productDescription').innerText = productDescription;
+            document.getElementById('productPrice').innerText = `Price: ${productPrice}`;
+            document.getElementById('productImage').src = productImage;
+        });
+    </script>
+</body>
+</html>
